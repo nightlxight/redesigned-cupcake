@@ -4,7 +4,7 @@ const yaml = require('js-yaml');
 const settings = yaml.load(fs.readFileSync('./settings.yml', 'utf8'));
 const client = new Client({ intents: [Intents.FLAGS.GUILDS] });
 const mongoose = require('mongoose');
-var exclamation = settings.exclamation; let space = settings.space;
+var exclamation = settings.exclamation; let space = `${settings.space}`
 client.commands = new Collection();
 const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
 
