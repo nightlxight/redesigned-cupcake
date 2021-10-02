@@ -1,11 +1,10 @@
-const rewire = require('rewire');
 var fs = require('fs');
 const { Client, Collection, Intents } = require('discord.js');
 const yaml = require('js-yaml');
 const settings = yaml.load(fs.readFileSync('./settings.yml', 'utf8'));
 const client = new Client({ intents: [Intents.FLAGS.GUILDS] });
-var exclamation = settings.exclamation;
-let space = settings.space;
+const mongoose = require('mongoose');
+var exclamation = settings.exclamation; let space = settings.space;
 client.commands = new Collection();
 const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
 
@@ -18,9 +17,9 @@ function whenOnReady() {
     client.user.setStatus(`${settings.status}`);
     client.user.setActivity(`${settings.activity}`,
     { type: `${settings.activityType}` });
-    console.log(`Durum` + ":" + `${settings.status}`);
-    console.log('Aktivite' + ":" + `${settings.activity}`);
-    console.log("Aktivite" + `${settings.space}` + "türü" + ":" + space + `${settings.activityType}`);
+    console.log(`Status` + ":" + `${settings.status}`);
+    console.log('Activity' + ":" + `${settings.activity}`);
+    console.log("Activity" + `${settings.space}` + "type" + ":" + space + `${settings.activityType}`);
     console.log(`${settings.consoleMessage}`);
     console.log(settings.loggedInAs + `${settings.space}` + `${client.user.tag}`);
 };
@@ -31,7 +30,7 @@ client.once('ready', () => {
             whenOnReady();
         };
     } catch (error) {
-        console.warn("There was an error!");
+        console.warn("There was an error!"); // * or console.error(); instead of warn.
         console.error(error);
     };
 });
