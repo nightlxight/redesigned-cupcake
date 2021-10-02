@@ -6,7 +6,7 @@ RedesignedCupcake_Version: "1.0.1"
 # General Configuration
 # -------------------------
 
-bot_name: "İlaydaliy"
+bot_name: "Redesigned Cupcake"
 token: "your bots token here"
 client_id: "your bots application id here"
 guild_id: "your bots development server id here"
