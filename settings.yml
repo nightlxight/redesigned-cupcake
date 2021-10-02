@@ -1,0 +1,47 @@
+# -------------------------
+# Version
+# -------------------------
+RedesignedCupcake_Version: "1.0.1"
+# -------------------------
+# General Configuration
+# -------------------------
+
+bot_name: "İlaydaliy"
+token: "your bots token here"
+client_id: "your bots application id here"
+guild_id: "your bots development server id here"
+invite_link: "your bots invite link here"
+
+# -------------------------
+# Activity Configuration
+# -------------------------
+
+# online, idle, dnd, invisible
+status: "online"
+# WATCHING, LISTENING, STREAMING, PLAYING
+activityType: WATCHING
+activity: "you"
+
+# -------------------------
+# Commands
+# -------------------------
+
+consoleCommandError: "There was an error while executing this command!"
+cantExecuteCommand: "There was an error while executing this command"
+
+# -------------------------
+# onReady
+# -------------------------
+
+consoleMessage: "The bot is ready!"
+loggedInAs: "Logged in as"
+
+# -------------------------
+# Other
+# -------------------------
+
+deployCommandsConsoleMessage: "Successfully registered application commands."
+space: " "
+exclamation: "!"
+
+# -------------------------
