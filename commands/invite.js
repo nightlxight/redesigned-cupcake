@@ -10,8 +10,9 @@ module.exports = {
         .setName('invite')
         .setDescription('Sends an invite link to your bot!'),
     async execute(interaction) {
+        let { random_color, red, green, cyan, aqua, lightcyan, yellow, orange, pink, purple } = require('../colors.json');
         let inviteLinkEmbed = new MessageEmbed()
-            .setColor('RANDOM')
+            .setColor(random_color) // * random_color, red, green, cyan, aqua, lightcyan, yellow, orange, pink, purple
             .setTitle('Invite Link')
             .setDescription(`${settings.invite_link}`)
             .setFooter(`Command executed by ${interaction.user.tag}`)
