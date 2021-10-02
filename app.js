@@ -12,7 +12,7 @@ for (const file of commandFiles) {
     const command = require(`./commands/${file}`);
     client.commands.set(command.data.name, command);
 };
-                                 
+                                  
 function whenOnReady() {
     client.user.setStatus(`${settings.status}`);
     client.user.setActivity(`${settings.activity}`,
