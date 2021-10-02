@@ -2,7 +2,7 @@ var fs = require('fs');
 const {SlashCommandBuilder} = require('@discordjs/builders');
 const {MessageEmbed} = require('discord.js');
 const yaml = require('js-yaml');
-const settings = yaml.load(fs.readFileSync('./settings', 'utf8'));
+const settings = yaml.load(fs.readFileSync('./settings.yml', 'utf8'));
 var space = settings.space; var exclamation = settings.exclamation;
 
 module.exports = {
