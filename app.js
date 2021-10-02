@@ -6,40 +6,6 @@ const settings = yaml.load(fs.readFileSync('./settings.yml', 'utf8'));
 const client = new Client({ intents: [Intents.FLAGS.GUILDS] });
 var exclamation = settings.exclamation;
 let space = settings.space;
-var my = new Object();
-var girlfriends = new Object();
-var me = my;
-var benim = my;
-let myValue = "e";
-my.girlfriends = girlfriends;
-my.name = "Furkan";
-my.surname = "Dinçer";
-benim.adım = my.name;
-benim.soyadım = my.surname;
-benim.age = my.age;
-benim.yaş = my.age;
-benim.yaşım = benim.yaş;
-my.lastname = my.surname;
-my.age = 12;
-my.girlfriends.name = "İlayda";
-my.girlfriends.surname = "Yücel";
-my.girlfriends.age = 12;
-my.girlfriends.lastname = my.girlfriends.surname;
-my.teachers = [
-    "Esme Kaya",
-    "Emine Kartal",
-    "Tuba Yavuzkendirci"
-];
-my.nationality = "Turkish";
-my.girlfriends.nationality = "Turkish";
-my.fullname = function() {
-    return my.name + `${settings.space}` + my.lastname;
-};
-my.girlfriends.fullname = function() {
-    return my.girlfriends.name + `${settings.space}` + my.girlfriends.lastname;
-};
-
-module.exports = {my, girlfriends};
 client.commands = new Collection();
 const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
 
